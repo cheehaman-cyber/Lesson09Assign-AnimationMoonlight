@@ -1,0 +1,104 @@
+body {
+    background-color: #100c24;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1; /*A larger number creates more space between the lines. 1 keeps a large heading compact.*/
+    padding: 0px;
+    margin: 10px 0 18px 0; /*top right bottom left*/
+}
+
+.invitation {
+    box-sizing: border-box;
+    width: 500px;
+    margin: 60px auto; /*60px is top and bottom auto is left and right and also means Browser, caluclate the empty space for me  ← equal space → [ invitation card ] ← equal space →*/
+    padding: 20px;
+    border: 2px solid #756295;
+    border-radius: 25px;
+    background-color: #211737;
+}
+
+.moon { /*moon is inside a <div>. A <div> is normally a block, so its invisible box takes the full available width: [                 🌙                 ]*/
+    display: inline-block; /* With inline-block, the invisible box wraps closely around the moon: [ 🌙 ]*/
+    font-size: 150px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.small-title {
+    color: #f9d881;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin: 5px 0;
+}
+
+.subtitle {
+    color: #f8f7f5;
+    max-width: 330px; /* makes the sentence narrow enough to use two lines */
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0 auto 10px; /*auto asks the browser to calculate the empty space automatically.*/
+}
+
+.party-button {
+    display: inline-block; /*lets the link behave like a small box*/
+    margin-top: 20px; /* padding is space outside the button*/
+    padding: 14px 50px; /* 14px = space 24px = space to the left and right of the words*/ 
+    background-color: #f9d881;
+    color: #211737;
+    text-decoration: none; /*remove the underline*/
+    font-size: 18px;
+    font-weight: 800;  /* Make the text bolder */
+    border-radius: 30px;   /* Round the corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Add the smooth transition */
+}
+
+.party-button:hover {
+    background-color: white;
+    transform: translateY(-4px);
+}
+
+.divider {
+    width: 85%;
+    margin: 28px auto 20px;
+    border: 0;
+    border-top: 1px solid #756295;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: auto;
+}
+
+#details {
+    font-size: 16px;
+}
+
+#details h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+#details p {
+    margin: 10px 0;
+}
+
+@keyframes float { /*Keyframes only describe the movement. They do not start it.*/
+    0% {
+        transform: translate(0); /*The moon is in its normal position. Y means the vertical direction—up and down.*/
+    }
+
+    50% {
+        transform: translateY(-30px);/*The negative number moves the moon upward by 30px. A positive number would move it downward.*/
+    }
+    100% {
+        transform: translateY(0); /*The moon returns to its original position.*/
+    }
+}
